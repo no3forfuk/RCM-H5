@@ -9,7 +9,7 @@ module.exports = merge(base, {
         new HtmlWebpackPlugin({ template: './index.html', filename: 'index.html' }),
     ],
     devServer: {
-
+        port:3000
 
 
     }

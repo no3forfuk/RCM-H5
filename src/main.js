@@ -1,14 +1,21 @@
 //引入vue
-import Vue from 'vue';
 
+import Vue from 'vue';
+//引入样式
+import './style/reset.css'
+import './style/common.css'
 import App from "./app.vue";
 import VueRouter from 'vue-router';
+
 Vue.use(VueRouter);
-const router = new VueRouter({
-    routes: [
-        { path: '/', component: App }
-    ]
-});
+const router = new VueRouter(require('./router/router'));
+
+
+require('./uiComponent/uiComponent');
+
+
+
+
 
 new Vue({
     el: '#app',
