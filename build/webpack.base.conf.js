@@ -1,6 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
-
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: {
@@ -8,8 +8,9 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
-        filename: '[name].js',
-        publicPath: '/'
+        filename: 'static/js/[name].js',
+        publicPath: '/',
+        chunkFilename: 'js/[chunkhash].js'
     },
     resolve: {
         extensions: ['.js', '.vue', '.json', '.css'],
@@ -36,15 +37,23 @@ module.exports = {
                 use: [{
                     loader: 'url-loader',
                     options: {
-                        limit: 10000
+                        limit: 1000,
+                        name:'static/image/[name].[ext]'
                     }
                 }]
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                // use: ['css-loader']
+                use: ExtractTextPlugin.extract({
+                    fallback: "vue-style-loader",
+                    use: "css-loader"
+                })
             }
 
         ]
-    }
+    },
+    plugins:[
+        new ExtractTextPlugin("static/css/[name].css"),
+    ]
 }

@@ -5,6 +5,8 @@ import Vue from 'vue';
 import './style/reset.css'
 import './style/common.css'
 import App from "./app.vue";
+import './style/fonts/iconfont.css'
+
 import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
