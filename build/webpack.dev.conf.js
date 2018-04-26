@@ -22,13 +22,14 @@ module.exports = merge(base, {
         new HtmlWebpackPlugin({template: './index.html', filename: 'index.html'}),
     ],
     devServer: {
+        host:'192.168.0.122',
         port: 3000,
         contentBase: './dist',
         before(app) {
             const bodyParser = require('body-parser');
             app.use(bodyParser.urlencoded({extended: false}));
             app.use(bodyParser.json());
-            app.get('/api/rank', function (req, res) {
+            app.get('/api/Home/index', function (req, res) {
                 res.json(mock.rank_level_2)
             })
         }

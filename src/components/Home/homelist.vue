@@ -2,43 +2,64 @@
     <div>
         <ul class="root">
             <li v-for="(item,index) in rank_2" :key="index">
-                <div class="left fl"><span class="number">1</span><i
-                        class="iconfont icon-ai215 upicon"></i>
-                </div>
-                <div class="center fl">
-                    <h3>#{{item.rank_name}}</h3>
-                    <p class="c-bottom text-grey text-size-12">
-                        {{item.rank_desc}}
-                    </p>
-                </div>
-                <ul class="right fl  text-size-12">
-                    <li v-for="(list,index) in item.data" :key="index">
-                        <span class="before-num text-center">{{index+1}}</span>
-                        <a href="javascript:;" class="text-black">@{{list.rank_name}}</a>
-                    </li>
-                </ul>
+                <router-link :to="{name:'rank2list',params:{content:item}}" class="text-black">
+                    <div class="left"><span class="number">{{index+1}}</span><i
+                            class="iconfont icon-ai215 upicon"></i>
+                    </div>
+                    <div class="center">
+                        <h3>{{item.ranking_name}}</h3>
+                        <p class="c-bottom text-grey text-size-12">
+                            {{item.ranking_desc}}
+                        </p>
+                    </div>
+                    <ul class="right text-size-12">
+                        <li v-for="(list,index) in item.data" :key="index">
+                            <span class="before-num text-center">{{index+1}}</span>
+                            <a href="javascript:;" class="text-black">
+                                {{getListValue(item,list).pre + getListValue(item,list).text}}
+                            </a>
+                        </li>
+                    </ul>
+                </router-link>
             </li>
         </ul>
     </div>
 </template>
 
 <script>
-    import {test} from '../../api/api'
+    import {getIendx} from '../../api/api'
 
     export default {
         data() {
             return {
-                rank_2: []
+                rank_2: [],
+                textFlag: '#'
             }
         },
         methods: {
+            getListValue(n, m) {
+                var pre = '';
+                var text = '';
+                if (n.ranking_level) {
+                    pre = '#';
+                    text = m.ranking_name;
+                }
+                if (n.ranking_level == 1) {
+                    pre = '#';
+                    text = m.ranking_name;
+                }
+                if (n.ranking_level == 2) {
+                    pre = '@';
+                    text = m.element_name;
+                }
+                return {pre, text}
+            },
             getdata() {
                 return new Promise((resolve, reject) => {
-                    test()
+                    getIendx()
                         .then(res => {
 
                             this.rank_2 = res.data.data
-                            console.log(this.rank_2);
                         })
                         .catch(err => {
                             reject(false);
@@ -54,6 +75,29 @@
 </script>
 
 <style scoped>
+    .center {
+        padding-right: 98px;
+        padding-left: 27px;
+        padding-bottom: 10px;
+    }
+
+    .root li {
+        position: relative;
+        width: 100%;
+    }
+
+    .root li > a {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .left {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
     .right li a {
         margin-left: 20px;
     }
@@ -63,6 +107,7 @@
         border-bottom: dotted 1px #F0882C;
         position: relative;
         overflow: visible;
+        white-space: nowrap;
     }
 
     .before-num {
@@ -78,9 +123,12 @@
     }
 
     .right {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
         height: 70px;
         overflow: auto;
-        width: 100px;
+        width: 88px;
     }
 
     .right::-webkit-scrollbar {
@@ -113,11 +161,6 @@
     .root > li {
         border-bottom: solid 0.1px #cccccc;
         margin-top: 5px;
-    }
-
-    .center {
-        width: 220px;
-        padding: 0 10px;
     }
 
     li {

@@ -3,10 +3,10 @@
 import request from './request'
 
 module.exports = {
-    //登陆
-    test(parmas) {
+
+    getIendx(parmas) {
         return request({
-            url: '/rank',
+            url: '/Home/index',
             method: 'get',
             data: parmas || {}
         })

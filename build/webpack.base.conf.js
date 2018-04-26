@@ -8,7 +8,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, '../dist'),
-        filename: 'static/js/[name].js',
+        filename: 'Home/js/[name].js',
         publicPath: '/',
         chunkFilename: 'js/[chunkhash].js'
     },
@@ -38,7 +38,7 @@ module.exports = {
                     loader: 'url-loader',
                     options: {
                         limit: 1000,
-                        name:'static/image/[name].[ext]'
+                        name:'Home/image/[name].[ext]'
                     }
                 }]
             },
@@ -54,6 +54,6 @@ module.exports = {
         ]
     },
     plugins:[
-        new ExtractTextPlugin("static/css/[name].css"),
+        new ExtractTextPlugin("Home/css/[name].css"),
     ]
 }
