@@ -4,7 +4,7 @@
             <i class="iconfont icon-jiantou fl" @click="back"></i>
             <i class="iconfont icon-tubiaozhizuomoban" @click="goHome"></i>
             <i class="iconfont icon-fenxiang"></i>
-            <p>#{{title}}</p>
+            <p>{{flag+title}}</p>
         </div>
 
     </div>
@@ -23,22 +23,24 @@
             back() {
                 this.$router.back();
             },
-            goHome(){
+            goHome() {
                 this.$router.replace('/');
             }
         },
-        props: ['title']
+        props: ['title', 'flag']
     }
 
 </script>
 
 <style scoped>
-    #header{
+    #header {
         position: fixed;
         width: 100%;
         top: 0;
         left: 0;
+        z-index: 1000;
     }
+
     .root p {
         font-size: 28px;
         margin-top: 15px;

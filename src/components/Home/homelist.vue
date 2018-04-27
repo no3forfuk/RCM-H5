@@ -2,7 +2,7 @@
     <div>
         <ul class="root">
             <li v-for="(item,index) in rank_2" :key="index">
-                <router-link :to="{name:'rank2list',params:{content:item}}" class="text-black">
+                <router-link :to="{name:getRouter(item),params:{content:item}}" class="text-black">
                     <div class="left"><span class="number">{{index+1}}</span><i
                             class="iconfont icon-ai215 upicon"></i>
                     </div>
@@ -15,9 +15,9 @@
                     <ul class="right text-size-12">
                         <li v-for="(list,index) in item.data" :key="index">
                             <span class="before-num text-center">{{index+1}}</span>
-                            <a href="javascript:;" class="text-black">
+                            <router-link :to="{name:'elementDetails',params:{ele:list}}" class="text-black">
                                 {{getListValue(item,list).pre + getListValue(item,list).text}}
-                            </a>
+                            </router-link>
                         </li>
                     </ul>
                 </router-link>
@@ -27,51 +27,57 @@
 </template>
 
 <script>
-    import {getIendx} from '../../api/api'
+import { getIendx } from "../../api/api";
 
-    export default {
-        data() {
-            return {
-                rank_2: [],
-                textFlag: '#'
-            }
-        },
-        methods: {
-            getListValue(n, m) {
-                var pre = '';
-                var text = '';
-                if (n.ranking_level) {
-                    pre = '#';
-                    text = m.ranking_name;
-                }
-                if (n.ranking_level == 1) {
-                    pre = '#';
-                    text = m.ranking_name;
-                }
-                if (n.ranking_level == 2) {
-                    pre = '@';
-                    text = m.element_name;
-                }
-                return {pre, text}
-            },
-            getdata() {
-                return new Promise((resolve, reject) => {
-                    getIendx()
-                        .then(res => {
-
-                            this.rank_2 = res.data.data
-                        })
-                        .catch(err => {
-                            reject(false);
-                        });
-                });
-            }
-        },
-        created() {
-            this.getdata();
-        }
+export default {
+  data() {
+    return {
+      rank_2: [],
+      textFlag: "#"
+    };
+  },
+  methods: {
+    getListValue(n, m) {
+      var pre = "";
+      var text = "";
+      if (n.ranking_level) {
+        pre = "#";
+        text = m.ranking_name;
+      }
+      if (n.ranking_level == 1) {
+        pre = "#";
+        text = m.ranking_name;
+      }
+      if (n.ranking_level == 2) {
+        pre = "@";
+        text = m.element_name;
+      }
+      return { pre, text };
+    },
+    getdata() {
+      return new Promise((resolve, reject) => {
+        getIendx()
+          .then(res => {
+            this.rank_2 = res.data.data;
+          })
+          .catch(err => {
+            reject(false);
+          });
+      });
+    },
+    getRouter(obj) {
+      var router = "";
+      if (obj.ranking_level && obj.ranking_level == 2) {
+        return (router = "rank2list");
+      } else if (obj.ranking_level && obj.ranking_level == 1) {
+        return (router = "rank1details");
+      }
     }
-
+  },
+  created() {
+    this.getdata();
+  }
+};
 </script>
 
 <style scoped>
@@ -131,10 +137,10 @@
         width: 88px;
     }
 
-    .right::-webkit-scrollbar {
-        width: 0;
-        height: 0
-    }
+.right::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
 
     .c-bottom {
         margin-top: 10px;

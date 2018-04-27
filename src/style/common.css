@@ -2,6 +2,10 @@
 .theme-color-bg {
     background-color: #2D394C;
 }
+*{
+    box-sizing: border-box;
+    overflow: hidden;
+}
 
 /*排版*/
 .text-center{

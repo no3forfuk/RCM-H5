@@ -16,7 +16,8 @@
                     style="marginLeft:8px;">2017.4.16</span>
         </div>
         <div class="footer">
-            <y-homelist></y-homelist>
+
+                <y-homelist ></y-homelist>
         </div>
     </div>
 </template>
