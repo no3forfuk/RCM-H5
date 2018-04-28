@@ -347,4 +347,57 @@ mock.rank_level_2 = {
         }
     ]
 }
+mock.rank_2 = {
+    "status_code": 1,
+    "message": "操作成功！",
+    "data": {
+        "ranking_name": "涂抹式面膜人气榜单",
+        "ranking_desc": "涂抹式面膜是日常护肤必不可少的一个环节～一起来看看大家最喜欢的是哪几种哪？",
+        "ranking_level": 2,
+        "id": 2,
+        "data": {
+            "current_page": 1,
+            "data": [
+                {
+                    "element_name": "菲洛嘉 柔滑亮泽焕颜面膜",
+                    "element_desc": "大名鼎鼎的十全大补面膜"
+                },
+                {
+                    "element_name": "香奈儿熨斗面膜",
+                    "element_desc": "涂抹式面膜中的经典单品"
+                },
+                {
+                    "element_name": "彼得罗夫青瓜啫喱面膜",
+                    "element_desc": "深层补水啫喱状面膜"
+                },
+                {
+                    "element_name": "碧欧泉奇迹面膜",
+                    "element_desc": "奇迹面膜，含有 35 种营养成分，5%的高浓度活源精粹 LIFE PLANKTON，能加速肌底细胞新陈代谢，激活肌肤自主吸收源动力，增强肌肤抵抗力。"
+                },
+                {
+                    "element_name": "科颜氏金盏花舒缓保湿面膜",
+                    "element_desc": "科颜氏金盏花舒缓保湿面膜，其配方保留了看得见的金盏花瓣，佐以芦荟汁配制，集镇静，舒缓，保湿，调理于一体，为肌肤注入焕颜活力，犹如浸浴在金盏花田一般清爽滋润，舒缓日常生活中的皮肤\"小情绪”。"
+                },
+                {
+                    "element_name": "悦木之源水润畅饮夜间密集修护面膜",
+                    "element_desc": "悦木之源水润畅饮夜间密集滋养面膜乳霜质地，细腻幼滑，容易推开，能有效深层补水滋润，让肌肤瞬间恢复水嫩充盈状态，平衡肌肤水油分泌，明显改善肤质状况。"
+                },
+                {
+                    "element_name": "馥蕾诗 红茶抗皱紧致修护面膜",
+                    "element_desc": "馥蕾诗红茶抗皱紧致修护面膜给予肌肤高效紧致，即刻柔软顺滑，幼嫩饱满。"
+                }
+            ],
+            "first_page_url": "http://rcm.cc/api/Ranking/getRanking/2?page=1",
+            "from": 1,
+            "last_page": 1,
+            "last_page_url": "http://rcm.cc/api/Ranking/getRanking/2?page=1",
+            "next_page_url": null,
+            "path": "http://rcm.cc/api/Ranking/getRanking/2",
+            "per_page": 15,
+            "prev_page_url": null,
+            "to": 7,
+            "total": 7
+        }
+    }
+}
 module.exports = mock

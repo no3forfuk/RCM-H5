@@ -31,6 +31,9 @@ module.exports = merge(base, {
             app.use(bodyParser.json());
             app.get('/api/Home/index', function (req, res) {
                 res.json(mock.rank_level_2)
+            });
+            app.get('/api/Ranking/getRanking/2', function (req, res) {
+                res.json(mock.rank_2)
             })
         }
 

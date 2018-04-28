@@ -7,8 +7,15 @@ module.exports = {
     getIendx(parmas) {
         return request({
             url: '/Home/index',
-            method: 'get',
+            method: 'GET',
             data: parmas || {}
+        })
+    },
+    getRank(id) {
+        return request({
+            url: '/Ranking/getRanking/' + id,
+            method: 'GET',
+            data: ''
         })
     },
 

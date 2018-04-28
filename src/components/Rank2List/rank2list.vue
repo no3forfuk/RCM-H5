@@ -171,6 +171,8 @@
 </template>
 
 <script>
+    import {getRank} from '../../api/api'
+
     export default {
         data() {
             return {
@@ -179,15 +181,36 @@
                 lists: [],
                 rankOrEle: '',
                 pre: '',
-                flag: '#'
+                flag: '#',
             };
         },
         created() {
+
+            // if (sessionStorage.getItem('rank_id')) {
+            //     getRank(sessionStorage.getItem('rank_id')).then(res => {
+            //         console.log(res.data);
+            //         this.content = res.data.data;
+            //        // this.decideRankLevel(this.content);
+            //     }).catch(err => {
+            //     })
+            // } else {
+            //     this.content = this.$route.params.content;
+            //     this.decideRankLevel(this.content);
+            //     sessionStorage.setItem('rank_id', this.content.id);
+            // }
             if (!this.$route.params.content) {
-                //发送请求 刷新页面
+
+
             } else {
                 this.content = this.$route.params.content;
                 this.decideRankLevel(this.content);
+                sessionStorage.setItem('rank_id', this.content.id);
+            }
+
+        },
+        computed: {
+            id() {
+                return sessionStorage.getItem('rank_id');
             }
         },
         methods: {
@@ -202,29 +225,32 @@
             }
             ,
             toggleWidth() {
-
+                //todo
             }
         }
     };
 </script>
 
 <style scoped>
-    .rd-bottom ul{
+    .rd-bottom ul {
         border-top: solid 1px #D4D4D4;
-        border-bottom: solid 1px #D4D4D4;
     }
-    .rd-bottom ul li{
+
+    .rd-bottom ul li {
         width: 33.3333333333%;
         text-align: center;
         height: 50px;
         line-height: 50px;
     }
-    .rd-bottom ul li:nth-child(1){
+
+    .rd-bottom ul li:nth-child(1) {
         border-right: solid 1px #D4D4D4;
     }
-    .rd-bottom ul li:nth-child(2){
+
+    .rd-bottom ul li:nth-child(2) {
         border-right: solid 1px #D4D4D4;
     }
+
     /*brief*/
     .rd-center {
         padding: 10px;
