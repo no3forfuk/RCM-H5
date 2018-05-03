@@ -81,95 +81,95 @@ export default {
 </script>
 
 <style scoped>
-    .center {
-        padding-right: 98px;
-        padding-left: 27px;
-        padding-bottom: 10px;
-    }
+.center {
+  padding-right: 98px;
+  padding-left: 27px;
+  padding-bottom: 10px;
+}
 
-    .root li {
-        position: relative;
-        width: 100%;
-    }
+.root li {
+  position: relative;
+  width: 100%;
+}
 
-    .root li > a {
-        display: block;
-        width: 100%;
-        overflow: hidden;
-    }
+.root li > a {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
 
-    .left {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-    }
+.left {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
 
-    .right li a {
-        margin-left: 20px;
-    }
+.right li a {
+  margin-left: 20px;
+}
 
-    .right li {
-        margin-top: 8px;
-        border-bottom: dotted 1px #F0882C;
-        position: relative;
-        overflow: visible;
-        white-space: nowrap;
-    }
+.right li {
+  margin-top: 8px;
+  border-bottom: dotted 1px #f0882c;
+  position: relative;
+  overflow: visible;
+  white-space: nowrap;
+}
 
-    .before-num {
-        display: block;
-        width: 12px;
-        height: 12px;
-        background-color: #F0882C;
-        color: #fff;
-        border-radius: 2px;
-        position: absolute;
-        top: 1px;
-        left: 0px;
-    }
+.before-num {
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: #f0882c;
+  color: #fff;
+  border-radius: 2px;
+  position: absolute;
+  top: 1px;
+  left: 0px;
+}
 
-    .right {
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
-        height: 70px;
-        overflow: auto;
-        width: 88px;
-    }
+.right {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  height: 70px;
+  overflow: auto;
+  width: 88px;
+}
 
 .right::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
 
-    .c-bottom {
-        margin-top: 10px;
-        height: 40px;
-        overflow: hidden;
-        line-height: 13px;
-    }
+.c-bottom {
+  margin-top: 10px;
+  height: 40px;
+  overflow: hidden;
+  line-height: 13px;
+}
 
-    .number {
-        display: block;
-        text-align: center;
-    }
+.number {
+  display: block;
+  text-align: center;
+}
 
-    .upicon {
-        display: block;
-        -webkit-transform: rotate(-90deg);
-    }
+.upicon {
+  display: block;
+  -webkit-transform: rotate(-90deg);
+}
 
-    .root {
-        padding: 8px;
-        overflow: hidden;
-    }
+.root {
+  padding: 8px;
+  overflow: auto;
+}
 
-    .root > li {
-        border-bottom: solid 0.1px #cccccc;
-        margin-top: 5px;
-    }
+.root > li {
+  border-bottom: solid 0.1px #cccccc;
+  margin-top: 5px;
+}
 
-    li {
-        overflow: hidden;
-    }
+li {
+  overflow: hidden;
+}
 </style>
