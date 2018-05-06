@@ -1,7 +1,7 @@
 <template>
     <div>
         <!--<keep-alive>-->
-            <!--<router-view v-if="$route.meta.keepAlive"></router-view>-->
+        <!--<router-view v-if="$route.meta.keepAlive"></router-view>-->
         <!--</keep-alive>-->
         <router-view></router-view>
     </div>
@@ -13,12 +13,14 @@
         data() {
             return {};
         },
-        created(){
+        created() {
         }
     };
 </script>
-<style scoped>
-
+<style>
+    @import './style/reset.css';
+    @import './style/common.css';
+    @import './style/fonts/iconfont.css';
 </style>
 
 

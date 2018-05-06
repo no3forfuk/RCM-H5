@@ -2,7 +2,7 @@
     <div>
         <ul class="root">
             <li v-for="(item,index) in rank_2" :key="index">
-                <router-link :to="{name:getRouter(item),params:{content:item}}" class="text-black">
+                <router-link :to="{name:getRouter(item),query:{level:item.ranking_level,id:'1'}}" class="text-black">
                     <div class="left"><span class="number">{{index+1}}</span><i
                             class="iconfont icon-ai215 upicon"></i>
                     </div>

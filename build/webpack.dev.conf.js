@@ -22,7 +22,7 @@ module.exports = merge(base, {
         new HtmlWebpackPlugin({template: './index.html', filename: 'index.html'}),
     ],
     devServer: {
-        host:'192.168.0.122',
+        host: '192.168.0.122',
         port: 3000,
         contentBase: './dist',
         before(app) {
@@ -30,10 +30,15 @@ module.exports = merge(base, {
             app.use(bodyParser.urlencoded({extended: false}));
             app.use(bodyParser.json());
             app.get('/api/Home/index', function (req, res) {
-                res.json(mock.rank_level_2)
+                res.json(mock.indexData)
             });
-            app.get('/api/Ranking/getRanking/2', function (req, res) {
-                res.json(mock.rank_2)
+            app.get('/api/Ranking/getRanking', function (req, res) {
+                if(req.query.level == 2){
+                    res.json(mock.rank_level_2)
+                }
+                if(req.query.level == 1){
+                    res.json(mock.rank_level_1)
+                }
             })
         }
 

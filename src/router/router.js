@@ -2,13 +2,17 @@
 'use strict'
 
 import Home from '../components/Home/home'
-import Rank2list from '../components/Rank2List/rank2list'
-import Rank1details from '../components/Rank1details/rank1details'
-import Element from '../components/Element/elementDetails'
+import Rank2list from '../components/Rank2/rank2lndex'
+import Rank1details from '../components/Rank1/rank1Index'
+import Element from '../components/Element/elementIndex'
 
 export const routes = [
     {path: '/', name: 'home', component: Home, meta: {keepAlive: true}},
-    {path: '/rank2list/:content', name: 'rank2list', component: Rank2list, meta: {keepAlive: true}},
+    {
+        path: '/rank2list', name: 'rank2list',
+        query: {level: 'level',id:'id'},
+        component: Rank2list, meta: {keepAlive: true}
+    },
     {path: '/rank1details/', name: 'rank1details', component: Rank1details, meta: {keepAlive: true}},
     {path: '/elementDetails/:ele', name: 'elementDetails', component: Element, meta: {keepAlive: true}},
 ]

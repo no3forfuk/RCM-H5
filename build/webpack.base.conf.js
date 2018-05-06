@@ -46,8 +46,8 @@ module.exports = {
                 test: /\.css$/,
                 // use: ['css-loader']
                 use: ExtractTextPlugin.extract({
-                    fallback: "vue-style-loader",
-                    use: "css-loader"
+                    fallback: "vue-style-loader!less-loader",
+                    use: "css-loader!less-loader"
                 })
             }
 

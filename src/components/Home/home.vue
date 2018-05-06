@@ -5,7 +5,7 @@
             <i class="iconfont icon-sousuo"></i>
             <i class="iconfont icon-caidan1"></i>
             <i class="iconfont icon-iconshitu"></i>
-            <h1 class="header-title">Today's RCM</h1>
+            <h1 class="header-title">{{home.title}}</h1>
         </div>
         <div class="text-black focus body">
             <y-focus></y-focus>
@@ -16,8 +16,7 @@
                     style="marginLeft:8px;">2017.4.16</span>
         </div>
         <div class="footer">
-
-                <y-homelist ></y-homelist>
+                <y-homelist></y-homelist>
         </div>
     </div>
 </template>
@@ -25,7 +24,12 @@
 <script>
     export default {
         data() {
-            return {};
+            return {
+                home:this.text.home
+            };
+        },
+        created(){
+
         }
     };
 </script>
