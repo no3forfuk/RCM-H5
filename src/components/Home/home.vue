@@ -7,16 +7,16 @@
         <div class="side-content" ref="content">
             <div class="theme-color-bg text-white header" ref="fixed">
                 <i class="iconfont icon-caidan" @click="openSideBar"></i>
-                <i class="iconfont icon-sousuo"></i>
-                <i class="iconfont icon-caidan1"></i>
-                <i class="iconfont icon-iconshitu"></i>
+                <!--<i class="iconfont icon-sousuo"></i>-->
+                <!--<i class="iconfont icon-caidan1"></i>-->
+                <!--<i class="iconfont icon-iconshitu"></i>-->
                 <h1 class="header-title">{{home.title}}</h1>
             </div>
-            <div class="text-black focus body">
-                <y-focus></y-focus>
-            </div>
+            <!--<div class="text-black focus body">-->
+                <!--<y-focus></y-focus>-->
+            <!--</div>-->
 
-            <div id="rcm-date" style="lineHeight:12px;">
+            <div id="rcm-date" style="lineHeight:12px;marginTop:93px;">
                   <span class="text-size-12 text-white"
                         style="marginLeft:8px;">2017.4.16</span>
             </div>
