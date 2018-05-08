@@ -38,22 +38,22 @@ module.exports = {
                     loader: 'url-loader',
                     options: {
                         limit: 1000,
-                        name:'Home/image/[name].[ext]'
+                        name: 'Home/image/[name].[ext]'
                     }
                 }]
             },
             {
                 test: /\.css$/,
-                // use: ['css-loader']
+                // use: ['css-loader'] vue-style-loader!
                 use: ExtractTextPlugin.extract({
-                    fallback: "vue-style-loader!less-loader",
-                    use: "css-loader!less-loader"
+                    fallback: "vue-style-loader",
+                    use: ['css-loader','less-loader']
                 })
             }
 
         ]
     },
-    plugins:[
+    plugins: [
         new ExtractTextPlugin("Home/css/[name].css"),
     ]
 }

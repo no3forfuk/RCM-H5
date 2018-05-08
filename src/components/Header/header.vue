@@ -1,10 +1,10 @@
 <template>
-    <div id="header">
+    <div id="header"  v-cloak>
         <div class="text-white root theme-color-bg">
             <i class="iconfont icon-jiantou fl" @click="back"></i>
             <i class="iconfont icon-tubiaozhizuomoban" @click="goHome"></i>
             <i class="iconfont icon-fenxiang"></i>
-            <p>{{flag+title}}</p>
+            <p v-text="flag+title"></p>
         </div>
 
     </div>
@@ -32,19 +32,28 @@
 
 </script>
 
-<style scoped>
+<style scoped lang="less">
+
+    [v-cloak] {
+        display: none;
+    }
+
     #header {
         position: fixed;
         width: 100%;
         top: 0;
         left: 0;
         z-index: 1000;
-    }
-
-    .root p {
-        font-size: 28px;
-        margin-top: 15px;
-        margin-left: 8px;
+        p {
+            white-space: nowrap;
+            overflow: hidden;
+            vertical-align: middle;
+            text-overflow: ellipsis;
+            font-size: 28px;
+            margin-top: 15px;
+            margin-left: 8px;
+            line-height: 30px;
+        }
     }
 
     .root {

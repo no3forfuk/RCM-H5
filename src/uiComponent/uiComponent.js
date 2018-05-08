@@ -1,6 +1,7 @@
 import Vue from 'vue'
-import Mint from 'mint-ui';
-Vue.use(Mint);
+// import Mint from 'mint-ui';
+import { Indicator } from 'mint-ui';
+Vue.use(Indicator);
 
 
 import Focus from '../components/Focus/focus.vue';
@@ -27,6 +28,10 @@ Vue.component('rank1-sublist',rank1SubList);
 import elementHeader from '../components/Element/elementHeader';
 import elementNeck from '../components/Element/elementNeck';
 import elementText from '../components/Element/postText';
+import elementTextImage from '../components/Element/textImage';
+import elementImage from '../components/Element/image';
 Vue.component('ele-header',elementHeader);
 Vue.component('ele-neck',elementNeck);
 Vue.component('ele-text',elementText);
+Vue.component('ele-textimage',elementTextImage);
+Vue.component('ele-image',elementImage);

@@ -32,6 +32,22 @@ module.exports = {
                 id: params.id
             }
         })
+    },
+    //获取微信鉴权
+    getWXConfig(){
+        return request({
+            url: '/wx/js/sdk',
+            method: 'GET'
+        })
+    },
+    //获取元素详情
+    getElement(id){
+        return request({
+            url: '/Element/getElementDetails',
+            method: 'GET',
+            params:{
+                id:id
+            }
+        })
     }
-
 }

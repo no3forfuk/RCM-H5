@@ -2,14 +2,14 @@
     <div>
         <ul>
             <li v-for="(item,index) in listInfo" :key="index">
-                <router-link :to="{}">
+                <router-link :to="{name:'rank2list',query:{level:item.ranking_level,id:item.id}}">
                     <div class="b-top">
                         <span class="text-white sort-number">1</span><span class="b-title">#{{item.ranking_name}}</span>
                     </div>
                     <div class="b-bottom">
                         <div class="hot">
                             <div class="b-hot">
-                                <span>1999</span>
+                                <span>222</span>
                             </div>
                         </div>
                         <p class="b-content">{{item.ranking_desc}}</p>
@@ -23,8 +23,7 @@
 <script>
     export default {
         data() {
-            return {
-            }
+            return {}
         },
         created() {
 
@@ -32,9 +31,7 @@
         mounted() {
 
         },
-        methods: {
-
-        },
+        methods: {},
         props: ['listInfo']
     }
 

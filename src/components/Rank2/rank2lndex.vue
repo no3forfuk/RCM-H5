@@ -17,7 +17,7 @@
             </div>
             <rank2-neck></rank2-neck>
         </div>
-        <rank1-sublist :listInfo="info.data"></rank1-sublist>
+        <rank2-sublist :listInfo="subInfo"></rank2-sublist>
 
     </div>
 </template>
@@ -28,11 +28,13 @@
     export default {
         data() {
             return {
-                info:{},
+                info: {},
                 flag: '#',
+                subInfo: {}
             };
         },
         created() {
+            console.log(this.$route.query);
             this.getRankList(this.$route.query)
         },
         computed: {},
@@ -42,10 +44,15 @@
 
             },
             getRankList(query) {
-                getSecondRank(query).then(res => {
-                    this.info = res.data.data;
-                }).catch(err => {
+                return new Promise((resolve, reject) => {
+                    getSecondRank(query).then(res => {
+                        this.info = res.data.data;
+                        this.subInfo = res.data.data.data.data
+                    }).catch(err => {
+                    })
+
                 })
+
 
             }
 

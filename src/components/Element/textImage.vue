@@ -1,20 +1,19 @@
 <template>
-
-        <router-link :to="{}">
-            <div class="left">
-                <p class="iconfont icon-xiaoxi"></p>
-                <span>333</span>
+    <router-link :to="{}">
+        <div class="left">
+            <p class="iconfont icon-xiaoxi"></p>
+            <span>333</span>
+        </div>
+        <div class="right">
+            <p>黑暗大陆回出现比蚁王更厉害的生物吗？</p>
+            <img src="" alt="">
+            <div class="user-info">
+                <img src="" alt="">
+                <span class="name">稀奇三人</span>
+                <span class="time fr">三小时前</span>
             </div>
-            <div class="right">
-                <p>黑暗大陆回出现比蚁王更厉害的生物吗？</p>
-                <div class="user-info">
-                    <img src="http://ouo49fh7e.bkt.clouddn.com/Fg6LAgtw0FURgmH-Qsae3Q_CtZ_P" alt="">
-                    <span class="name">稀奇三人</span>
-                    <span class="time fr">三小时前</span>
-                </div>
-            </div>
-        </router-link>
-
+        </div>
+    </router-link>
 </template>
 
 <script>
@@ -51,6 +50,14 @@
             padding-left: 50px;
             p{
                 color: #222;
+            }
+            >img{
+                margin-top: 5px;
+                width: 230px;
+                height: 120px;
+                display: block;
+                background-color: #ccc;
+                border-radius: 4px;
             }
             .user-info {
                 position: relative;

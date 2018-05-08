@@ -976,32 +976,156 @@ mock.rank_level_1 = {
         "data": [
             {
                 "id": 1,
-                "ranking_name": "222",
-                "ranking_desc": null,
+                "ranking_name": "涂抹式面膜人气榜单",
+                "ranking_desc": "涂抹式面膜是日常护肤必不可少的一个环节～一起来看看大家最喜欢的是哪几种哪？",
                 "ranking_level": 2,
                 "exponent": 0,
                 "is_check": 0,
-                "is_hide": 0,
+                "is_hide": 1,
                 "asterisk": 0,
-                "created_at": "2018-05-04 18:25:45",
-                "updated_at": "2018-05-04 18:25:45",
+                "created_at": "2018-05-04 10:11:59",
+                "updated_at": "2018-05-04 10:11:59",
                 "operate_name": {
-                    "name": "admin"
+                    "name": "admin",
+                    "last_time": null,
+                    "last_ip": null,
+                    "status": 0
+                }
+            },
+            {
+                "id": 2,
+                "ranking_name": "猫粮品牌排行榜",
+                "ranking_desc": "猫咪是人们最爱的宠物之一，为了伺候好猫主子，口粮的选择是很重要的。好的猫粮能让猫咪健康成长。",
+                "exponent": 0,
+                "is_check": 0,
+                "is_hide": 1,
+                "asterisk": 0,
+                "created_at": "2018-05-04 10:11:59",
+                "updated_at": "2018-05-04 10:11:59",
+                "operate_name": {
+                    "name": "admin",
+                    "last_time": null,
+                    "last_ip": null,
+                    "status": 0
                 }
             },
             {
                 "id": 3,
-                "ranking_name": "222",
-                "ranking_desc": null,
-                "ranking_level": 2,
+                "ranking_name": "789798797",
+                "ranking_desc": "天然猫粮一般是指肉类和蛋白质韩流比较丰富，有蔬菜、全麦粉、纤维等成分的猫粮。不含人工添加剂，成分安全，对猫咪的成长很有好处的。",
                 "exponent": 0,
                 "is_check": 0,
-                "is_hide": 0,
+                "is_hide": 1,
                 "asterisk": 0,
-                "created_at": "2018-05-04 18:26:16",
-                "updated_at": "2018-05-04 18:26:16",
+                "created_at": "2018-05-04 10:11:59",
+                "updated_at": "2018-05-04 10:11:59",
                 "operate_name": {
-                    "name": "admin"
+                    "name": "admin",
+                    "last_time": null,
+                    "last_ip": null,
+                    "status": 0
+                }
+            },
+            {
+                "id": 4,
+                "ranking_name": "耐养便宜的宠物排行榜",
+                "ranking_desc": "没钱没时间还想养宠物？那你一定需要这个榜单",
+                "exponent": 0,
+                "is_check": 0,
+                "is_hide": 1,
+                "asterisk": 0,
+                "created_at": "2018-05-04 10:11:59",
+                "updated_at": "2018-05-04 10:11:59",
+                "operate_name": {
+                    "name": "admin",
+                    "last_time": null,
+                    "last_ip": null,
+                    "status": 0
+                }
+            },
+            {
+                "id": 5,
+                "ranking_name": "长寿宠物排行榜",
+                "ranking_desc": "世界上最长寿的宠物是？",
+                "exponent": 0,
+                "is_check": 0,
+                "is_hide": 1,
+                "asterisk": 0,
+                "created_at": "2018-05-04 10:11:59",
+                "updated_at": "2018-05-04 10:11:59",
+                "operate_name": {
+                    "name": "admin",
+                    "last_time": null,
+                    "last_ip": null,
+                    "status": 0
+                }
+            },
+            {
+                "id": 6,
+                "ranking_name": "理科热门专业",
+                "ranking_desc": "高中文理分科时每个人都会面临着究竟是学文还是学理的纠结。很多人认为学文不如学理，理由是理科范围广好就业。那么理科最热门的专业有哪些呢?",
+                "exponent": 0,
+                "is_check": 0,
+                "is_hide": 1,
+                "asterisk": 0,
+                "created_at": "2018-05-04 10:11:59",
+                "updated_at": "2018-05-04 10:11:59",
+                "operate_name": {
+                    "name": "admin",
+                    "last_time": null,
+                    "last_ip": null,
+                    "status": 0
+                }
+            },
+            {
+                "id": 7,
+                "ranking_name": "美国医科专业学校排行",
+                "ranking_desc": "想去美国留学学习医科专业，哪所学校的医学院最好呢？",
+                "exponent": 0,
+                "is_check": 0,
+                "is_hide": 1,
+                "asterisk": 0,
+                "created_at": "2018-05-04 10:11:59",
+                "updated_at": "2018-05-04 10:11:59",
+                "operate_name": {
+                    "name": "admin",
+                    "last_time": null,
+                    "last_ip": null,
+                    "status": 0
+                }
+            },
+            {
+                "id": 8,
+                "ranking_name": "女生热门专业",
+                "ranking_desc": "在这些专业里，可能90%以上都是女生，男女比例严重失调…",
+                "exponent": 0,
+                "is_check": 0,
+                "is_hide": 1,
+                "asterisk": 0,
+                "created_at": "2018-05-04 10:11:59",
+                "updated_at": "2018-05-04 10:11:59",
+                "operate_name": {
+                    "name": "admin",
+                    "last_time": null,
+                    "last_ip": null,
+                    "status": 0
+                }
+            },
+            {
+                "id": 9,
+                "ranking_name": "热门小语种",
+                "ranking_desc": "由于小语种人才稀缺，因此身怀\"绝技\"的人才不但有机会在外交部、商务部等国家相关部委就职，还能报考公务员、进外企、做陪同翻译等，待遇也很好。你看好哪些小语种呢？",
+                "exponent": 0,
+                "is_check": 0,
+                "is_hide": 1,
+                "asterisk": 0,
+                "created_at": "2018-05-04 10:11:59",
+                "updated_at": "2018-05-04 10:11:59",
+                "operate_name": {
+                    "name": "admin",
+                    "last_time": null,
+                    "last_ip": null,
+                    "status": 0
                 }
             }
         ]
@@ -1009,41 +1133,215 @@ mock.rank_level_1 = {
 }
 mock.rank_level_2 = {
     "status_code": 1,
-    "message": "获取二级成功！",
+    "message": "操作成功！",
     "data": {
-        "ranking_name": "获取二级成功",
-        "ranking_desc": "获取二级成功",
-        "ranking_level": "1",
-        "data": [
-            {
-                "id": 1,
-                "element_name": "222",
-                "element_desc": 'nullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnull',
-                "exponent": 0,
-                "is_check": 0,
-                "is_hide": 0,
-                "asterisk": 0,
-                "created_at": "2018-05-04 18:25:45",
-                "updated_at": "2018-05-04 18:25:45",
-                "operate_name": {
-                    "name": "admin"
+        "id": 1,
+        "ranking_name": "其他",
+        "ranking_desc": null,
+        "exponent": 0,
+        "is_check": 0,
+        "is_hide": 0,
+        "asterisk": 0,
+        "created_at": "2018-05-08 10:28:24",
+        "updated_at": "2018-05-08 10:28:24",
+        "data": {
+            "current_page": 1,
+            "data": [
+                {
+                    "id": 1,
+                    "element_name": "菲洛嘉 柔滑亮泽焕颜面膜",
+                    "element_desc": "大名鼎鼎的十全大补面膜",
+                    "exponent": 0,
+                    "is_check": 0,
+                    "is_hide": 0,
+                    "asterisk": 0,
+                    "created_at": "2018-05-08 10:28:24",
+                    "updated_at": "2018-05-08 10:28:24",
+                    "pivot": {
+                        "ranking_id": 1,
+                        "element_id": 1
+                    }
+                },
+                {
+                    "id": 2,
+                    "element_name": "香奈儿熨斗面膜",
+                    "element_desc": "涂抹式面膜中的经典单品",
+                    "exponent": 0,
+                    "is_check": 0,
+                    "is_hide": 0,
+                    "asterisk": 0,
+                    "created_at": "2018-05-08 10:28:24",
+                    "updated_at": "2018-05-08 10:28:24",
+                    "pivot": {
+                        "ranking_id": 1,
+                        "element_id": 2
+                    }
+                },
+                {
+                    "id": 3,
+                    "element_name": "彼得罗夫青瓜啫喱面膜",
+                    "element_desc": "深层补水啫喱状面膜",
+                    "exponent": 0,
+                    "is_check": 0,
+                    "is_hide": 0,
+                    "asterisk": 0,
+                    "created_at": "2018-05-08 10:28:24",
+                    "updated_at": "2018-05-08 10:28:24",
+                    "pivot": {
+                        "ranking_id": 1,
+                        "element_id": 3
+                    }
+                },
+                {
+                    "id": 4,
+                    "element_name": "碧欧泉奇迹面膜",
+                    "element_desc": "奇迹面膜，含有 35 种营养成分，5%的高浓度活源精粹 LIFE PLANKTON，能加速肌底细胞新陈代谢，激活肌肤自主吸收源动力，增强肌肤抵抗力。",
+                    "exponent": 0,
+                    "is_check": 0,
+                    "is_hide": 0,
+                    "asterisk": 0,
+                    "created_at": "2018-05-08 10:28:24",
+                    "updated_at": "2018-05-08 10:28:24",
+                    "pivot": {
+                        "ranking_id": 1,
+                        "element_id": 4
+                    }
+                },
+                {
+                    "id": 5,
+                    "element_name": "科颜氏金盏花舒缓保湿面膜",
+                    "element_desc": "科颜氏金盏花舒缓保湿面膜，其配方保留了看得见的金盏花瓣，佐以芦荟汁配制，集镇静，舒缓，保湿，调理于一体，为肌肤注入焕颜活力，犹如浸浴在金盏花田一般清爽滋润，舒缓日常生活中的皮肤\"小情绪”。",
+                    "exponent": 0,
+                    "is_check": 0,
+                    "is_hide": 0,
+                    "asterisk": 0,
+                    "created_at": "2018-05-08 10:28:24",
+                    "updated_at": "2018-05-08 10:28:24",
+                    "pivot": {
+                        "ranking_id": 1,
+                        "element_id": 5
+                    }
+                },
+                {
+                    "id": 6,
+                    "element_name": "悦木之源水润畅饮夜间密集修护面膜",
+                    "element_desc": "悦木之源水润畅饮夜间密集滋养面膜乳霜质地，细腻幼滑，容易推开，能有效深层补水滋润，让肌肤瞬间恢复水嫩充盈状态，平衡肌肤水油分泌，明显改善肤质状况。",
+                    "exponent": 0,
+                    "is_check": 0,
+                    "is_hide": 0,
+                    "asterisk": 0,
+                    "created_at": "2018-05-08 10:28:24",
+                    "updated_at": "2018-05-08 10:28:24",
+                    "pivot": {
+                        "ranking_id": 1,
+                        "element_id": 6
+                    }
+                },
+                {
+                    "id": 7,
+                    "element_name": "馥蕾诗 红茶抗皱紧致修护面膜",
+                    "element_desc": "馥蕾诗红茶抗皱紧致修护面膜给予肌肤高效紧致，即刻柔软顺滑，幼嫩饱满。",
+                    "exponent": 0,
+                    "is_check": 0,
+                    "is_hide": 0,
+                    "asterisk": 0,
+                    "created_at": "2018-05-08 10:28:24",
+                    "updated_at": "2018-05-08 10:28:24",
+                    "pivot": {
+                        "ranking_id": 1,
+                        "element_id": 7
+                    }
                 }
-            },
-            {
-                "id": 1,
-                "element_name": "333",
-                "element_desc": 'nullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnullnull',
-                "exponent": 0,
-                "is_check": 0,
-                "is_hide": 0,
-                "asterisk": 0,
-                "created_at": "2018-05-04 18:25:45",
-                "updated_at": "2018-05-04 18:25:45",
-                "operate_name": {
-                    "name": "admin"
+            ],
+            "first_page_url": "http://rcm.bantangtv.com/api/Ranking/getRanking?page=1",
+            "from": 1,
+            "last_page": 1,
+            "last_page_url": "http://rcm.bantangtv.com/api/Ranking/getRanking?page=1",
+            "next_page_url": null,
+            "path": "http://rcm.bantangtv.com/api/Ranking/getRanking",
+            "per_page": 15,
+            "prev_page_url": null,
+            "to": 7,
+            "total": 7
+        }
+    }
+}
+mock.element = {
+    "status_code": 1,
+    "message": "获取成功！",
+    "data": {
+        "id": 1,
+        "element_name": "菲洛嘉 柔滑亮泽焕颜面膜",
+        "element_desc": "大名鼎鼎的十全大补面膜",
+        "exponent": 0,
+        "is_check": 0,
+        "is_hide": 0,
+        "asterisk": 0,
+        "created_at": "2018-05-08 10:28:24",
+        "updated_at": "2018-05-08 10:28:24",
+        "data": {
+            "current_page": 1,
+            "data": [
+                {
+                    "id": 1,
+                    "post_content": "乳白色乳霜质地，延展性极佳，淡淡的清香",
+                    "type": 1,
+                    "img": null,
+                    "video": null,
+                    "out_link": null,
+                    "link_title": null,
+                    "link_desc": null,
+                    "exponent": 0,
+                    "comment_num": 0,
+                    "is_check": 0,
+                    "is_hide": 1,
+                    "created_at": "2018-05-08 10:28:24",
+                    "updated_at": "2018-05-08 10:28:24"
+                },
+                {
+                    "id": 2,
+                    "post_content": "涂抹后没有厚重感，很滋润",
+                    "type": 1,
+                    "img": null,
+                    "video": null,
+                    "out_link": null,
+                    "link_title": null,
+                    "link_desc": null,
+                    "exponent": 0,
+                    "comment_num": 0,
+                    "is_check": 0,
+                    "is_hide": 1,
+                    "created_at": "2018-05-08 10:28:24",
+                    "updated_at": "2018-05-08 10:28:24"
+                },
+                {
+                    "id": 3,
+                    "post_content": "每次用在要发痘痘的地方，因为它有镇定舒缓的效用",
+                    "type": 1,
+                    "img": null,
+                    "video": null,
+                    "out_link": null,
+                    "link_title": null,
+                    "link_desc": null,
+                    "exponent": 0,
+                    "comment_num": 0,
+                    "is_check": 0,
+                    "is_hide": 1,
+                    "created_at": "2018-05-08 10:28:24",
+                    "updated_at": "2018-05-08 10:28:24"
                 }
-            }
-        ]
+            ],
+            "first_page_url": "http://rcm.bantangtv.com/api/Element/getElementDetails?page=1",
+            "from": 1,
+            "last_page": 1,
+            "last_page_url": "http://rcm.bantangtv.com/api/Element/getElementDetails?page=1",
+            "next_page_url": null,
+            "path": "http://rcm.bantangtv.com/api/Element/getElementDetails",
+            "per_page": 15,
+            "prev_page_url": null,
+            "to": 3,
+            "total": 3
+        }
     }
 }
 module.exports = mock

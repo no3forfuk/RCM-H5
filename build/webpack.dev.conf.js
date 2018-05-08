@@ -27,18 +27,30 @@ module.exports = merge(base, {
         contentBase: './dist',
         before(app) {
             const bodyParser = require('body-parser');
+            const request = require('request');
+
             app.use(bodyParser.urlencoded({extended: false}));
             app.use(bodyParser.json());
             app.get('/api/Home/index', function (req, res) {
                 res.json(mock.indexData)
             });
             app.get('/api/Ranking/getRanking', function (req, res) {
-                if(req.query.level == 2){
+                if (req.query.level == 2) {
                     res.json(mock.rank_level_2)
                 }
-                if(req.query.level == 1){
+                if (req.query.level == 1) {
                     res.json(mock.rank_level_1)
                 }
+            })
+            // app.get('/api/wx/js/sdk', function (req, res) {
+            //     console.log();
+            //     res.json({
+            //         code: '001',
+            //         message: 'bingo'
+            //     })
+            // })
+            app.get('/api/Element/getElementDetails', function (req, res) {
+                res.json(mock.element)
             })
         }
 

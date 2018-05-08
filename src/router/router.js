@@ -10,12 +10,13 @@ export const routes = [
     {path: '/', name: 'home', component: Home, meta: {keepAlive: true}},
     {
         path: '/rank2list', name: 'rank2list',
-        query: {level: 'level',id:'id'},
+        query: {level: 'level', id: 'id'},
         component: Rank2list, meta: {keepAlive: true}
     },
     {path: '/rank1details/', name: 'rank1details', component: Rank1details, meta: {keepAlive: true}},
-    {path: '/elementDetails/:ele', name: 'elementDetails', component: Element, meta: {keepAlive: true}},
+    {path: '/elementDetails', name: 'elementDetails', query: {id: 'id'}, component: Element, meta: {keepAlive: true}},
 ]
 export default {
+    mode: 'history',
     routes
 }
