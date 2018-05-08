@@ -2,21 +2,20 @@
     <div class="root">
         <y-header v-bind:title="info.ranking_name" v-bind:flag="flag"></y-header>
         <div class="rank-details">
-            <!--<rank1-header></rank1-header>-->
             <div class="rd-center">
-                <div class="c-left">
-                    <div class="utils">
-                        <div class="c-level">S+</div>
-                        <div class="c-hot fr">8W</div>
-                    </div>
-                </div>
+                <!--<div class="c-left">-->
+                <!--<div class="utils">-->
+                <!--<div class="c-level">S+</div>-->
+                <!--<div class="c-hot fr">8W</div>-->
+                <!--</div>-->
+                <!--</div>-->
                 <div class="c-right">
-                    <p>{{info.ranking_desc}}</p>
-                    <span class="up-down"><i class="iconfont icon-jiantou" @click="toggleWidth"></i></span>
+                    <p ref="details" v-text="info.ranking_desc || '暂时没有描述信息哦'"></p>
+                    <span class="up-down"><i class="iconfont icon-jiantou" @click="toggleWidth($event)"></i></span>
 
                 </div>
             </div>
-            <rank1-neck></rank1-neck>
+            <!--<rank1-neck></rank1-neck>-->
 
         </div>
         <rank1-sublist :listInfo="info.data"></rank1-sublist>
@@ -30,7 +29,7 @@
     export default {
         data() {
             return {
-                info:{},
+                info: {},
                 title: "",
                 lists: [],
                 rankOrEle: '',
@@ -52,7 +51,26 @@
                     })
                 })
             },
-            toggleWidth() {
+            toggleWidth(e) {
+                let dom = this.$refs.details;
+                let str = window.getComputedStyle(dom).height;
+                let num = parseInt(str);
+                if (num == 55) {
+                    this.$refs.details.style.height = 'auto';
+                    e.target.style.transform = 'rotate(-90deg)';
+                    str = window.getComputedStyle(dom).height;
+                    num = parseInt(str);
+                    if (num < 55) {
+                        this.$refs.details.style.height = '55px';
+                        e.target.style.transform = 'rotate(90deg)';
+                    } else {
+                        this.$refs.details.style.height = 'auto';
+                        e.target.style.transform = 'rotate(-90deg)';
+                    }
+                } else {
+                    this.$refs.details.style.height = '55px';
+                    e.target.style.transform = 'rotate(90deg)';
+                }
             }
         }
     };
@@ -94,7 +112,8 @@
     }
 
     .c-right {
-        padding-left: 44px;
+        /*padding-left: 44px;*/
+        padding-left: 20px;
     }
 
     .c-right p {

@@ -8,9 +8,8 @@
                             class="iconfont icon-ai215 upicon"></i>
                     </div>
                     <div class="center">
-                        <h3>{{item.ranking_name}}</h3>
-                        <p class="c-bottom text-grey text-size-12">
-                            {{item.ranking_desc}}
+                        <h3 v-text="item.ranking_name"></h3>
+                        <p class="c-bottom text-grey text-size-12" v-text="item.ranking_desc || '暂时没有描述信息哦'">
                         </p>
                     </div>
                     <ul class="right text-size-12">
@@ -103,7 +102,7 @@
 <style scoped>
     .center {
         padding-right: 98px;
-        padding-left: 27px;
+        padding-left: 30px;
         padding-bottom: 10px;
     }
 
@@ -180,13 +179,13 @@
     }
 
     .root {
-        padding: 8px;
+        padding:8px;
         overflow: auto;
     }
 
     .root > li {
         border-bottom: solid 0.1px #cccccc;
-        margin-top: 5px;
+        margin-top: 10px;
     }
 
     li {

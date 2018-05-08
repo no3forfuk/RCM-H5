@@ -3,8 +3,8 @@
         <div class="text-white root theme-color-bg">
             <i class="iconfont icon-jiantou fl" @click="back"></i>
             <i class="iconfont icon-tubiaozhizuomoban" @click="goHome"></i>
-            <i class="iconfont icon-fenxiang"></i>
-            <p v-text="flag+title"></p>
+            <!--<i class="iconfont icon-fenxiang"></i>-->
+            <p v-text="flag +title"></p>
         </div>
 
     </div>

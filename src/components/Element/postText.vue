@@ -1,19 +1,18 @@
 <template>
-
-        <router-link :to="{}">
-            <div class="left">
-                <p class="iconfont icon-xiaoxi"></p>
-                <span>333</span>
+    <router-link :to="{}">
+        <!--<div class="left">-->
+        <!--<p class="iconfont icon-xiaoxi"></p>-->
+        <!--<span>333</span>-->
+        <!--</div>-->
+        <div class="right">
+            <p v-text="postinfo.post_content"></p>
+            <div class="user-info">
+                <img src="http://ouo49fh7e.bkt.clouddn.com/Fg6LAgtw0FURgmH-Qsae3Q_CtZ_P" alt="">
+                <span class="name">稀奇三人</span>
+                <!--<span class="time fr">三小时前</span>-->
             </div>
-            <div class="right">
-                <p>黑暗大陆回出现比蚁王更厉害的生物吗？</p>
-                <div class="user-info">
-                    <img src="http://ouo49fh7e.bkt.clouddn.com/Fg6LAgtw0FURgmH-Qsae3Q_CtZ_P" alt="">
-                    <span class="name">稀奇三人</span>
-                    <span class="time fr">三小时前</span>
-                </div>
-            </div>
-        </router-link>
+        </div>
+    </router-link>
 
 </template>
 
@@ -22,7 +21,10 @@
     export default {
         data() {
             return {}
-        }
+        },
+        created() {
+        },
+        props: ['postinfo']
     }
 
 </script>
@@ -48,8 +50,9 @@
         }
         .right {
             width: 100%;
-            padding-left: 50px;
-            p{
+            /*padding-left: 50px;*/
+            padding-left: 20px;
+            p {
                 color: #222;
             }
             .user-info {

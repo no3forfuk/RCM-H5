@@ -1,8 +1,14 @@
 <template>
     <div class="root">
         <div class="side-bar" ref="sidebar">
-            <span style="font-size: 24px;marginTop: 5px;marginRight: 5px;" class="fr"
+            <span style="font-size: 30px;marginTop: 5px;marginRight: 5px;" class="fr text-white"
                   @click="closeSideBar">&times;</span>
+            <div class="erweima">
+                <img src="../../static/images/erweima.jpg" alt="" style="width: 200px;height: 200px;">
+            </div>
+            <p class="more">更多优质榜单</p>
+            <p class="only">尽在RCM惹草莓</p>
+
         </div>
         <div class="side-content" ref="content">
             <div class="theme-color-bg text-white header" ref="fixed">
@@ -13,12 +19,12 @@
                 <h1 class="header-title">{{home.title}}</h1>
             </div>
             <!--<div class="text-black focus body">-->
-                <!--<y-focus></y-focus>-->
+            <!--<y-focus></y-focus>-->
             <!--</div>-->
 
             <div id="rcm-date" style="lineHeight:12px;marginTop:93px;">
                   <span class="text-size-12 text-white"
-                        style="marginLeft:8px;">2017.4.16</span>
+                        style="marginLeft:8px;" v-text="time"></span>
             </div>
             <div class="footer">
                 <y-homelist></y-homelist>
@@ -28,10 +34,13 @@
 </template>
 
 <script>
+    import {timeFormat} from '../../utils/utils'
+
     export default {
         data() {
             return {
-                home: this.text.home
+                home: this.text.home,
+                time: timeFormat('.')
             };
         },
         created() {
@@ -40,30 +49,58 @@
         methods: {
             openSideBar() {
                 this.$refs.sidebar.style.width = '100%';
-                this.$refs.content.style.paddingLeft = '100%';
-                this.$refs.fixed.style.left = '100%';
+                this.$refs.sidebar.style.opacity = 0.95;
 
             },
             closeSideBar() {
                 this.$refs.sidebar.style.width = '0px';
-                this.$refs.content.style.paddingLeft = '0px';
-                this.$refs.fixed.style.left = '0px';
+                this.$refs.sidebar.style.opacity = 0;
             }
         }
     };
 </script>
 
-<style scoped>
+<style scoped lang="less">
+    .erweima {
+        position: relative;
+        margin: 0 auto;
+        margin-top: 140px;
+        img {
+            margin-top: 80px;
+        }
+
+    }
+
     .side-bar {
+        text-align: center;
+        font-size: 0px;
         height: 1000px;
         width: 0px;
-        background-color: #ccc;
+        background-color: #333;
         position: fixed;
         top: 0;
         left: 0px;
         z-index: 1000;
         transition: all 0.5s;
         opacity: 0.8;
+        .more {
+            position: absolute;
+            top: 145px;
+            left: 0px;
+            width: 100%;
+            height: 30px;
+            color: #fff;
+            font-size: 20px;
+        }
+        .only {
+            position: absolute;
+            top: 180px;
+            left: 0px;
+            width: 100%;
+            height: 30px;
+            color: #fff;
+            font-size: 20px;
+        }
     }
 
     .side-content {

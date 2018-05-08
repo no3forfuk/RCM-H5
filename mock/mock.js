@@ -104,6 +104,7 @@ mock.indexData = {
         {
             "ranking_name": "中国各省份高考难度",
             "ranking_level": 2,
+            "ranking_desc": "学生把自己当牲口，老师把学生当超人他们等待了两年读完三年课，剩下一年还玩命”。三年平均每天睡眠时间不足六小时。考试卷的难度系数：大概是360度前空翻托马斯跳接侧身旋转三周半后以720度转体后空翻。",
             "data": [
                 {
                     "id": 99,
@@ -971,7 +972,7 @@ mock.rank_level_1 = {
     "message": "获取一级成功！",
     "data": {
         "ranking_name": "qweq",
-        "ranking_desc": "asdadfasdd",
+        "ranking_desc": "学生把自己当牲口，老师把学生当超人”“他们等待了两年读完三年课，剩下一年还玩命”。三年平均每天睡眠时间不足六小时。考试卷的难度系数：大概是360度前空翻托马斯跳接侧身旋转三周半后以720度转体后空翻",
         "ranking_level": "1",
         "data": [
             {
@@ -1137,7 +1138,7 @@ mock.rank_level_2 = {
     "data": {
         "id": 1,
         "ranking_name": "其他",
-        "ranking_desc": null,
+        "ranking_desc": "学生把自己当牲口，老师把学生当超人”“他们等待了两年读完三年课，剩下一年还玩命”。三年平均每天睡眠时间不足六小时。考试卷的难度系数：大概是360度前空翻托马斯跳接侧身旋转三周半后以720度转体后空翻。",
         "exponent": 0,
         "is_check": 0,
         "is_hide": 0,
@@ -1272,7 +1273,7 @@ mock.element = {
     "data": {
         "id": 1,
         "element_name": "菲洛嘉 柔滑亮泽焕颜面膜",
-        "element_desc": "大名鼎鼎的十全大补面膜",
+        "element_desc": null,
         "exponent": 0,
         "is_check": 0,
         "is_hide": 0,

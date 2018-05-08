@@ -9,7 +9,7 @@
                     <div class="b-bottom">
                         <div class="hot">
                             <div class="b-hot">
-                                <span>1999</span>
+                                <!--<span>1999</span>-->
                             </div>
                         </div>
                         <p class="b-content">{{item.element_name}}</p>
@@ -71,7 +71,7 @@
 
             .b-title {
                 width: 100%;
-                padding-left: 30px;
+                padding-left: 40px;
                 font-size: 22px;
                 color: black;
             }
@@ -87,7 +87,7 @@
                 height: 44px;
                 overflow: hidden;
                 color: #8b8b8b;
-                padding-left: 35px;
+                padding-left: 45px;
                 line-height: 22px;
                 box-sizing: border-box;
             }
