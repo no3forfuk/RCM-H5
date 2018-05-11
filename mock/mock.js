@@ -4,6 +4,7 @@ const mock = {}
 mock.indexData = {
     "status_code": 1,
     "message": "获取成功！",
+    "date": '2018-06-10',
     "data": [
         {
             "ranking_name": "其他",
@@ -974,6 +975,10 @@ mock.rank_level_1 = {
         "ranking_name": "qweq",
         "ranking_desc": "学生把自己当牲口，老师把学生当超人”“他们等待了两年读完三年课，剩下一年还玩命”。三年平均每天睡眠时间不足六小时。考试卷的难度系数：大概是360度前空翻托马斯跳接侧身旋转三周半后以720度转体后空翻",
         "ranking_level": "1",
+        "operate_type": 1,
+        "admin": {
+            "name": "admin"
+        },
         "data": [
             {
                 "id": 1,

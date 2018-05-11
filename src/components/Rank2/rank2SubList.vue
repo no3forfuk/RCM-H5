@@ -12,7 +12,7 @@
                                 <!--<span>1999</span>-->
                             </div>
                         </div>
-                        <p class="b-content">{{item.element_name}}</p>
+                        <p class="b-content">{{item.element_desc}}</p>
                     </div>
                 </router-link>
             </li>

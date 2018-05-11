@@ -19,11 +19,15 @@ const router = new VueRouter(require('./router/router'));
 
 require('./uiComponent/uiComponent');
 //微信SDK
-import {getWXConfig} from './api/api';
+import { getWXConfig } from './api/api';
 import wx from 'weixin-js-sdk';
+import axios from 'axios';
 
+axios.get('https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=9_sKJ3ZdmVOhq0twYiTEYEEJfq9kriBD_ueD8ZIdCEEk6y2_D8UhlF1G3dhpdCw5hL0TEUOd8FcCuWSmWjn0QIDR8QfbDcWOWOyXUP2HbZUL0oKGixeKTenwhkxaOQZF8leaYGgtNJ7edf84o-JKKfAAADEE&type=jsapi').then(res => {
+    console.log(res)
+})
 Vue.prototype.WXConfig = getWXConfig
-
+getWXConfig()
 
 new Vue({
     el: '#app',

@@ -7,8 +7,10 @@ module.exports = {
     getIendx(parmas) {
         return request({
             url: '/Home/index',
-            method: 'GET',
-            data: parmas || {}
+            method: 'POST',
+            data: {
+                time:parmas
+            }
         })
     },
     //获取二级榜单
