@@ -13,12 +13,13 @@
                 </div>
                 <span class="up-down"><i class="iconfont icon-jiantou" @click="toggleWidth($event)"></i></span>
             </div>
-            <!--<ele-neck></ele-neck>-->
+            <ele-neck></ele-neck>
         </div>
         <ul>
             <li v-for="(item,index) in postList" :key="index">
                 <ele-text v-if="isText(item.type)" v-bind:postinfo="item"></ele-text>
-                <ele-textimage v-if="isTextImage(item.type)"></ele-textimage>
+                <!-- <ele-textimage v-if="isTextImage(item.type)"></ele-textimage> -->
+                <ele-textimage v-if="true"></ele-textimage>
                 <ele-image v-if="isImage(item.type)"></ele-image>
             </li>
         </ul>

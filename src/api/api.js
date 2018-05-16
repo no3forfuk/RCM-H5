@@ -9,7 +9,7 @@ module.exports = {
             url: '/Home/index',
             method: 'POST',
             data: {
-                time:parmas
+                time: parmas
             }
         })
     },
@@ -25,7 +25,7 @@ module.exports = {
         })
     },
     //获取一级榜单
-    getFirstRank(params){
+    getFirstRank(params) {
         return request({
             url: '/Ranking/getRanking',
             method: 'GET',
@@ -36,19 +36,19 @@ module.exports = {
         })
     },
     //获取微信鉴权
-    getWXConfig(){
+    getWXConfig() {
         return request({
-            url: '/wx/js/sdk',
-            method: 'GET'
+            url: '/Wx/signature',
+            method: 'POST'
         })
     },
     //获取元素详情
-    getElement(id){
+    getElement(id) {
         return request({
             url: '/Element/getElementDetails',
             method: 'GET',
-            params:{
-                id:id
+            params: {
+                id: id
             }
         })
     }

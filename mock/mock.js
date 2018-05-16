@@ -7,7 +7,7 @@ mock.indexData = {
     "date": '2018-06-10',
     "data": [
         {
-            "ranking_name": "其他",
+            "ranking_name": "涂抹式面膜是日常护肤必不可少的一个环节～一起来看看大家最喜欢的是哪几种哪？",
             "ranking_level": 1,
             "data": [
                 {

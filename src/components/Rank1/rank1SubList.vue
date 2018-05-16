@@ -4,13 +4,13 @@
             <li v-for="(item,index) in listInfo" :key="index">
                 <router-link :to="{name:'rank2list',query:{level:item.ranking_level,id:item.id}}">
                     <div class="b-top">
-                        <span class="text-white sort-number">1</span><span class="b-title">#{{item.ranking_name}}</span>
+                        <span class="text-white sort-number">{{index+1}}</span><span class="b-title">#{{item.ranking_name}}</span>
                     </div>
                     <div class="b-bottom">
                         <div class="hot">
-                            <div class="b-hot">
-                                <span>222</span>
-                            </div>
+                            <!--<div class="b-hot">-->
+                            <!--<span>222</span>-->
+                            <!--</div>-->
                         </div>
                         <p class="b-content">{{item.ranking_desc}}</p>
                     </div>
@@ -64,6 +64,7 @@
                 position: relative;
                 width: 100%;
                 line-height: 22px;
+
             }
 
             .b-title {
@@ -71,6 +72,10 @@
                 padding-left: 40px;
                 font-size: 22px;
                 color: black;
+                line-height: 24px;
+                white-space:nowrap;
+                overflow:hidden;
+                text-overflow:ellipsis;
             }
 
             .b-bottom {

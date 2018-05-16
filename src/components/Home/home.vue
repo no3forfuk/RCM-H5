@@ -22,7 +22,7 @@
             <!--<y-focus></y-focus>-->
             <!--</div>-->
 
-            
+            <div style="height: 93px;">placeholder</div>
             <div class="footer">
                 <y-homelist v-for="(item,index) in week" :key="index" v-bind:day="item"></y-homelist>
             </div>
@@ -31,107 +31,115 @@
 </template>
 
 <script>
-import { timeFormat } from "../../utils/utils";
+    import {timeFormat} from "../../utils/utils";
 
-export default {
-  data() {
-    return {
-      home: this.text.home,
-      time: timeFormat("."),
-      week: [0, 1, 2]
+    export default {
+        data() {
+            return {
+                home: this.text.home,
+                time: timeFormat("."),
+                week: [0, 1, 2]
+            };
+        },
+        created() {
+
+        },
+        methods: {
+            openSideBar() {
+                this.$refs.sidebar.style.width = "100%";
+                this.$refs.sidebar.style.opacity = 0.95;
+            },
+            closeSideBar() {
+                this.$refs.sidebar.style.width = "0px";
+                this.$refs.sidebar.style.opacity = 0;
+            }
+        }
     };
-  },
-  created() {},
-  methods: {
-    openSideBar() {
-      this.$refs.sidebar.style.width = "100%";
-      this.$refs.sidebar.style.opacity = 0.95;
-    },
-    closeSideBar() {
-      this.$refs.sidebar.style.width = "0px";
-      this.$refs.sidebar.style.opacity = 0;
-    }
-  }
-};
 </script>
 
 <style scoped lang="less">
-.erweima {
-  position: relative;
-  margin: 0 auto;
-  margin-top: 140px;
-  img {
-    margin-top: 80px;
-  }
-}
+    .footer {
+        height: 100%;
+        overflow: auto;
+    }
 
-.side-bar {
-  text-align: center;
-  font-size: 0px;
-  height: 1000px;
-  width: 0px;
-  background-color: #333;
-  position: fixed;
-  top: 0;
-  left: 0px;
-  z-index: 1000;
-  transition: all 0.5s;
-  opacity: 0.8;
-  .more {
-    position: absolute;
-    top: 145px;
-    left: 0px;
-    width: 100%;
-    height: 30px;
-    color: #fff;
-    font-size: 20px;
-  }
-  .only {
-    position: absolute;
-    top: 180px;
-    left: 0px;
-    width: 100%;
-    height: 30px;
-    color: #fff;
-    font-size: 20px;
-  }
-}
+    .erweima {
+        position: relative;
+        margin: 0 auto;
+        margin-top: 140px;
+        img {
+            margin-top: 80px;
+        }
+    }
 
-.side-content {
-  width: 100%;
-  position: relative;
-  transition: all 0.5s;
-}
+    .side-bar {
+        text-align: center;
+        font-size: 0px;
+        height: 1000px;
+        width: 0px;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        left: 0px;
+        z-index: 1000;
+        transition: all 0.5s;
+        opacity: 0.8;
+        .more {
+            position: absolute;
+            top: 145px;
+            left: 0px;
+            width: 100%;
+            height: 30px;
+            color: #fff;
+            font-size: 20px;
+        }
+        .only {
+            position: absolute;
+            top: 180px;
+            left: 0px;
+            width: 100%;
+            height: 30px;
+            color: #fff;
+            font-size: 20px;
+        }
+    }
 
-.root {
-  position: relative;
-}
+    .side-content {
+        width: 100%;
+        position: relative;
+        transition: all 0.5s;
+        overflow-y: auto;
+    }
 
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 8px;
-  box-shadow: 0px 0px 10px #080808;
-  z-index: 100;
-  transition: all 0.5s;
-}
+    .root {
+        position: relative;
+    }
 
-.header .iconfont {
-  font-size: 32px;
-}
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 8px;
+        box-shadow: 0px 0px 10px #080808;
+        z-index: 100;
+        transition: all 0.5s;
+    }
 
-.header-title {
-  font-size: 38px;
-  font-family: "微软雅黑";
-  margin-top: 5px;
-  font-size: 40px;
-  font-weight: 500;
-}
+    .header .iconfont {
+        font-size: 32px;
+    }
 
-.body {
-  width: 100%;
-  margin-top: 100px;
-}
+    .header-title {
+        font-size: 38px;
+        font-family: "微软雅黑";
+        margin-top: 5px;
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+    .body {
+        width: 100%;
+        margin-top: 100px;
+    }
 </style>

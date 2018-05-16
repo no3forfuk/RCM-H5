@@ -23,8 +23,7 @@
 <script>
     export default {
         data() {
-            return {
-            }
+            return {}
         },
         created() {
 
@@ -32,9 +31,7 @@
         mounted() {
 
         },
-        methods: {
-
-        },
+        methods: {},
         props: ['listInfo']
     }
 
@@ -58,7 +55,8 @@
                 background-color: #f0882c;
                 border-radius: 2px;
                 line-height: 20px;
-                text-align: center;
+                padding-top: 3px;
+                text-indent: 9px;
                 position: absolute;
                 top: 1px;
                 left: 4px;
@@ -67,6 +65,10 @@
                 position: relative;
                 width: 100%;
                 line-height: 22px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
             }
 
             .b-title {
@@ -74,6 +76,8 @@
                 padding-left: 40px;
                 font-size: 22px;
                 color: black;
+                line-height: 24px;
+
             }
 
             .b-bottom {

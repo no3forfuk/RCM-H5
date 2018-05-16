@@ -19,15 +19,38 @@ const router = new VueRouter(require('./router/router'));
 
 require('./uiComponent/uiComponent');
 //微信SDK
-import { getWXConfig } from './api/api';
-import wx from 'weixin-js-sdk';
-import axios from 'axios';
+import {getWXConfig} from './api/api';
 
-axios.get('https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=9_sKJ3ZdmVOhq0twYiTEYEEJfq9kriBD_ueD8ZIdCEEk6y2_D8UhlF1G3dhpdCw5hL0TEUOd8FcCuWSmWjn0QIDR8QfbDcWOWOyXUP2HbZUL0oKGixeKTenwhkxaOQZF8leaYGgtNJ7edf84o-JKKfAAADEE&type=jsapi').then(res => {
-    console.log(res)
+// const wx = require('./utils/wx-sdk');
+import wx from 'weixin-js-sdk'
+
+console.log(wx);
+router.beforeEach((to, from, next) => {
+    getWXConfig().then(res => {
+        let config = res.data.data;
+        config.jsApiList = [];
+        config.jsApiList[0] = 'onMenuShareAppMessage';
+        wx.config(config);
+        wx.ready(function () {
+            wx.onMenuShareTimeline({
+                title: 'a', // 分享标题
+                link: 's', // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+                imgUrl: 'd', // 分享图标
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+        })
+    }).catch(err => {
+        console.log(err);
+    })
+
+    next();
+
 })
-Vue.prototype.WXConfig = getWXConfig
-getWXConfig()
 
 new Vue({
     el: '#app',

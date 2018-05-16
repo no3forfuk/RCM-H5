@@ -19,7 +19,7 @@ module.exports = merge(base, {
     mode: 'development',
     devtool: 'inline-source-map',
     plugins: [
-        new HtmlWebpackPlugin({ template: './index.html', filename: 'index.html' }),
+        new HtmlWebpackPlugin({template: './index.html', filename: 'index.html'}),
     ],
     devServer: {
         host: '192.168.0.122',
@@ -29,7 +29,7 @@ module.exports = merge(base, {
             const bodyParser = require('body-parser');
             const request = require('request');
 
-            app.use(bodyParser.urlencoded({ extended: false }));
+            app.use(bodyParser.urlencoded({extended: false}));
             app.use(bodyParser.json());
             app.post('/api/Home/index', function (req, res) {
                 res.json(mock.indexData)
@@ -43,9 +43,9 @@ module.exports = merge(base, {
                 }
             })
             app.get('/api/wx/js/sdk', function (req, res) {
-                request.get('https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=9_sKJ3ZdmVOhq0twYiTEYEEJfq9kriBD_ueD8ZIdCEEk6y2_D8UhlF1G3dhpdCw5hL0TEUOd8FcCuWSmWjn0QIDR8QfbDcWOWOyXUP2HbZUL0oKGixeKTenwhkxaOQZF8leaYGgtNJ7edf84o-JKKfAAADEE&type=jsapi').then(res => {
-                    console.log(res)
-                })
+
+
+
             })
 
             app.get('/api/Element/getElementDetails', function (req, res) {
