@@ -51,6 +51,11 @@
     font-size: 20px;
 }
 
+.rank-title-fs {
+    font-size: 18px;
+    line-height: 18px;
+}
+
 /*字体颜色*/
 .text-grey {
     color: #8B8B8B;

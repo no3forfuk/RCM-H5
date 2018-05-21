@@ -10,7 +10,7 @@ module.exports = {
         path: path.resolve(__dirname, '../dist'),
         filename: 'Home/js/[name].js',
         publicPath: '/',
-        chunkFilename: 'js/[chunkhash].js'
+        chunkFilename: 'Home/js/[chunkhash].js'
     },
     resolve: {
         extensions: ['.js', '.vue', '.json', '.css'],
@@ -38,7 +38,7 @@ module.exports = {
                     loader: 'url-loader',
                     options: {
                         limit: 1000,
-                        name: 'Home/image/[name].[ext]'
+                        name: 'Home/image/[name][hash].[ext]'
                     }
                 }]
             },
@@ -47,7 +47,7 @@ module.exports = {
                 // use: ['css-loader'] vue-style-loader!
                 use: ExtractTextPlugin.extract({
                     fallback: "vue-style-loader",
-                    use: ['css-loader','less-loader']
+                    use: ['css-loader', 'less-loader']
                 })
             }
 

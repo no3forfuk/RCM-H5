@@ -3,19 +3,19 @@
         <y-header v-bind:title="info.ranking_name" v-bind:flag="flag"></y-header>
         <div class="rank-details">
             <div class="rd-center">
-                <!--<div class="c-left">-->
-                <!--<div class="utils">-->
-                <!--<div class="c-level">S+</div>-->
-                <!--<div class="c-hot fr">8W</div>-->
-                <!--</div>-->
-                <!--</div>-->
+                <div class="c-left">
+                <div class="utils">
+                <div class="c-level">S+</div>
+                <div class="c-hot fr">8W</div>
+                </div>
+                </div>
                 <div class="c-right">
                     <p ref="details" v-text="info.ranking_desc || '暂时没有描述信息哦'"></p>
                     <span class="up-down"><i class="iconfont icon-jiantou" @click="toggleWidth($event)"></i></span>
 
                 </div>
             </div>
-            <!--<rank1-neck></rank1-neck>-->
+            <rank1-neck></rank1-neck>
 
         </div>
         <rank1-sublist :listInfo="info.data"></rank1-sublist>
@@ -112,8 +112,8 @@
     }
 
     .c-right {
-        /*padding-left: 44px;*/
-        padding-left: 20px;
+        padding-left: 44px;
+        /*padding-left: 20px;*/
     }
 
     .c-right p {

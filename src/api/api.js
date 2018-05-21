@@ -51,5 +51,23 @@ module.exports = {
                 id: id
             }
         })
+    },
+    //获取评论
+    getDiscuss(params) {
+        return request({
+            url: '/Ranking/getComment',
+            method: 'GET',
+            params: params
+        })
+    },
+    //获取POST详情
+    getPostDetailsById(params) {
+        return request({
+            url: '/Post/getPostDetails',
+            method: 'GET',
+            params: {
+                id: params
+            }
+        })
     }
 }

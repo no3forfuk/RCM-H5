@@ -1,5 +1,5 @@
 <template>
-    <div id="header"  v-cloak>
+    <div id="header" v-cloak ref="header">
         <div class="text-white root theme-color-bg">
             <i class="iconfont icon-jiantou fl" @click="back"></i>
             <i class="iconfont icon-tubiaozhizuomoban" @click="goHome"></i>
@@ -40,6 +40,7 @@
 
     #header {
         position: fixed;
+        -webkit-transform: translateZ(0);
         width: 100%;
         top: 0;
         left: 0;
@@ -49,7 +50,7 @@
             overflow: hidden;
             vertical-align: middle;
             text-overflow: ellipsis;
-            font-size: 28px;
+            font-size: 22px;
             margin-top: 15px;
             margin-left: 8px;
             line-height: 30px;
@@ -63,8 +64,7 @@
     }
 
     .root > i {
-        font-size: 30px;
-        margin: 5px;
+        font-size: 28px;
     }
 
     .root > i:nth-child(1) {

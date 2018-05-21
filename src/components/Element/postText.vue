@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="{}">
+    <router-link :to="{name:'postDetails',query:{id:postinfo.id}}">
         <!--<div class="left">-->
         <!--<p class="iconfont icon-xiaoxi"></p>-->
         <!--<span>333</span>-->

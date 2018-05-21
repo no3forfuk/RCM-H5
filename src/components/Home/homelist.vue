@@ -205,10 +205,10 @@
         width: 88px;
     }
 
-    .right::-webkit-scrollbar {
-        width: 0;
-        height: 0;
-    }
+    /*.right::-webkit-scrollbar {*/
+        /*width: 0;*/
+        /*height: 0;*/
+    /*}*/
 
     .c-bottom {
         margin-top: 10px;

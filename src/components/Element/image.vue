@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="{}">
+    <router-link :to="{name:'postDetails',query:{id:item.id}}">
         <div class="left">
             <p class="iconfont icon-xiaoxi"></p>
             <span>333</span>
@@ -47,7 +47,7 @@
         .right {
             width: 100%;
             padding-left: 50px;
-            >img{
+            > img {
                 margin-top: 5px;
                 width: 230px;
                 height: 120px;

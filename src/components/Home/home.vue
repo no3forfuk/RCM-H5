@@ -60,7 +60,7 @@
 <style scoped lang="less">
     .footer {
         height: 100%;
-        overflow: auto;
+        overflow-y: auto;
     }
 
     .erweima {

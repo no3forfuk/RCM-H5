@@ -1257,7 +1257,53 @@ mock.rank_level_2 = {
                         "ranking_id": 1,
                         "element_id": 7
                     }
+                },
+                {
+                    "id": 7,
+                    "element_name": "馥蕾诗 红茶抗皱紧致修护面膜",
+                    "element_desc": "馥蕾诗红茶抗皱紧致修护面膜给予肌肤高效紧致，即刻柔软顺滑，幼嫩饱满。",
+                    "exponent": 0,
+                    "is_check": 0,
+                    "is_hide": 0,
+                    "asterisk": 0,
+                    "created_at": "2018-05-08 10:28:24",
+                    "updated_at": "2018-05-08 10:28:24",
+                    "pivot": {
+                        "ranking_id": 1,
+                        "element_id": 7
+                    }
+                },
+                {
+                    "id": 7,
+                    "element_name": "馥蕾诗 红茶抗皱紧致修护面膜",
+                    "element_desc": "馥蕾诗红茶抗皱紧致修护面膜给予肌肤高效紧致，即刻柔软顺滑，幼嫩饱满。",
+                    "exponent": 0,
+                    "is_check": 0,
+                    "is_hide": 0,
+                    "asterisk": 0,
+                    "created_at": "2018-05-08 10:28:24",
+                    "updated_at": "2018-05-08 10:28:24",
+                    "pivot": {
+                        "ranking_id": 1,
+                        "element_id": 7
+                    }
+                },
+                {
+                    "id": 10,
+                    "element_name": "馥蕾诗 红茶抗皱紧致修护面膜",
+                    "element_desc": "馥蕾诗红茶抗皱紧致修护面膜给予肌肤高效紧致，即刻柔软顺滑，幼嫩饱满。",
+                    "exponent": 0,
+                    "is_check": 0,
+                    "is_hide": 0,
+                    "asterisk": 0,
+                    "created_at": "2018-05-08 10:28:24",
+                    "updated_at": "2018-05-08 10:28:24",
+                    "pivot": {
+                        "ranking_id": 1,
+                        "element_id": 7
+                    }
                 }
+
             ],
             "first_page_url": "http://rcm.bantangtv.com/api/Ranking/getRanking?page=1",
             "from": 1,
