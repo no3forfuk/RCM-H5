@@ -168,6 +168,7 @@
                 position: absolute;
                 top: 55px;
                 left: 1px;
+                font-size: 12px;
             }
         }
         .right {

@@ -1,6 +1,5 @@
 <template>
     <div class="root">
-        <y-header v-bind:title="info.ranking_name" v-bind:flag="flag"></y-header>
         <div class="rank-details">
             <rank2-header></rank2-header>
             <div class="rd-center">

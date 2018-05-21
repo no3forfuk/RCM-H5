@@ -1,6 +1,5 @@
 <template>
     <div class="root">
-        <y-header v-bind:title="title" v-bind:flag="flag"></y-header>
         <div style="margin-top: 100px;background-color: #d3d3d3;height: 14px;line-height: 12px;">
             <span style="color: #fff;font-size: 12px;margin-left: 10px;">精彩评论</span>
         </div>
