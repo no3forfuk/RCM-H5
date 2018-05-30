@@ -34,6 +34,7 @@
         },
         methods: {
 
+
         },
         props: ['listInfo']
     }
